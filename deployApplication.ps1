@@ -11,7 +11,7 @@ $subscription = Read-Host "Enter the Subscription Name of where the VMs deployin
 $csvPath = Read-Host "Enter the CSV file path and name"
 $outfilepath = Read-Host "Enter the output file path and name"
 $runCommandScript = "runCommand.ps1"
-$runCommandPath = "C:\Users\adam.wyllie\OneDrive - Claranet Limited\GIT\Azure\public-cloud\PowerShell\RunCommandInstaller\"
+$runCommandPath = ".\" #It's expected the 2 scripts are kept together
 $runCommand = $runCommandPath + $runCommandScript
 
 function ConnectToAzure {
