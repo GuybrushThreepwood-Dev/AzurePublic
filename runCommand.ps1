@@ -1,7 +1,7 @@
 <#
     Powershell installer
-    This script is invoked by a separate script that identifies devices to run on and the installer url
-    This script will access a file from a storage container and run/install it
+    This script is invoked by a separate script "deployApplication.ps1 that identifies devices to run on
+    This script will access a file from a storage container and run/install it using a pre-generated SAS URL
 #>
 
 #Variables
