@@ -10,7 +10,7 @@ $sasURL = "" #Enter a generated SAS URL here
 $serviceName = "" #Enter the name of the applications service, if applicable
 $log = "C:\Windows\Logs\Agent_install.log" #Recommended to edit and add the application name
 #Compile the Nessus arguments 
-$execArgList = ""; #Application install argmaents can be added here
+$execArgList = ""; #Application install arguments can be added here
 
 
 #Check the existence of the service
