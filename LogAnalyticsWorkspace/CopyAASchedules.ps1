@@ -1,11 +1,11 @@
 ﻿$aaSchedules = @()
 
-$AA = "AA-EUW-PRD"
-$RG = "RG-EUW-PRD-OMS"
-$sub = "Mazars UK - CSP"
-$newAA = "aa-ops-prd-mgmt-ukso-01"
-$newRG = "rg-ops-prd-mgmt-ukso-01"
-$newSub = "muk-management-001"
+$AA = ""
+$RG = ""
+$sub = "P"
+$newAA = ""
+$newRG = ""
+$newSub = ""
 
 #Function to copy the captured schedules
 function copyAASchedules{
@@ -15,7 +15,7 @@ function copyAASchedules{
       #$newSub
     )
     #Select the subscription of the Automation Account, Vairables are being copied to
-    Select-AzSubscription -subscriptionname "$NewSub"
+    Select-AzSubscription -subscriptionname $NewSub
     foreach ($aaSchedule in $aaSchedules){
       #Extract the Schedule Details from the list
       $schedName = $aaSchedule.Name
@@ -43,7 +43,6 @@ function copyAASchedules{
       }
     }
 }
-
 
 #Select the subscription of the Automation Account, Variables are being copied from
 Select-AzSubscription -subscriptionname "$sub"
