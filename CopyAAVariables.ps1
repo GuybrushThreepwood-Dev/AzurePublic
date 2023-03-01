@@ -1,11 +1,11 @@
 ﻿$aaVars = @()
 
-$AA = "AA-EUW-PRD"
-$RG = "RG-EUW-PRD-OMS"
-$newAA = "aa-ops-prd-mgmt-ukso-01"
-$newRG = "rg-ops-prd-mgmt-ukso-01"
-$sub = "Mazars UK - CSP"
-$newSub = "muk-management-001"
+$AA = ""
+$RG = ""
+$newAA = ""
+$newRG = ""
+$sub = ""
+$newSub = ""
 
 function copyAAVariables{
     param (
@@ -14,7 +14,7 @@ function copyAAVariables{
       #$newSub
     )
     #Select the subscription of the Automation Account, Vairables are being copied to
-    Select-AzSubscription -subscriptionname "$NewSub"
+    Select-AzSubscription -subscriptionname $NewSub
     foreach ($aaVar in $aaVars){
       #Extract the Vairable Name and value from the list
       $varName = $aaVar.Name
@@ -25,9 +25,8 @@ function copyAAVariables{
     }
 }
 
-
 #Select the subscription of the Automation Account, Variables are being copied from
-Select-AzSubscription -subscriptionname "$sub"
+Select-AzSubscription -subscriptionname $sub
 
 #Get the variables from the automation account being copied from
 $aaVars = Get-AzAutomationVariable -ResourceGroupName $RG -AutomationAccountName $AA
