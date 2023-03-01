@@ -1,11 +1,11 @@
 ﻿$aaRBAssoc = @()
 
-$AA = "AA-EUW-PRD"
-$RG = "RG-EUW-PRD-OMS"
-$sub = "Mazars UK - CSP"
-$newAA = "aa-ops-prd-mgmt-ukso-01"
-$newRG = "rg-ops-prd-mgmt-ukso-01"
-$newSub = "muk-management-001"
+$AA = ""
+$RG = ""
+$sub = ""
+$newAA = ""
+$newRG = ""
+$newSub = ""
 
 
 
@@ -27,9 +27,6 @@ function copyAAScheduleRb{
     }
 }
 
-
-
 $aaRBAssocs = Get-AzAutomationScheduledRunbook -ResourceGroupName $RG -AutomationAccountName $AA
-
 
 copyAAScheduleRb
