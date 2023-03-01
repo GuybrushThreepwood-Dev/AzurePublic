@@ -1,6 +1,6 @@
 //Query a LAW log Storage Container
 StorageBlobLogs
-| where AccountName contains "cpssacpm25sqlabackup"
+| where AccountName contains ""
 | where OperationName == "DeleteBlob"
-| where ObjectKey contains "StarDBA" and ObjectKey contains "DIFF"
+| where ObjectKey contains "" and ObjectKey contains "DIFF"
 | distinct TimeGenerated, RequesterUpn, ObjectKey, OperationName
