@@ -11,7 +11,7 @@ function applyRetention{
     param (
       #$RG,
       #$LAW,
-      #$lawTables
+      #$lawTables,
       #$retDays,
       #$retDaysTotal
     )
