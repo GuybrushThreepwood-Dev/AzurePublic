@@ -2,7 +2,7 @@
 
 $AA = ""
 $RG = ""
-$sub = "P"
+$sub = ""
 $newAA = ""
 $newRG = ""
 $newSub = ""
